@@ -1,23 +1,25 @@
-//
 //  ButtonCell.swift
 //  iOSTest
-//
 //  Created by Guillermo Romo Jiménez on 21/09/22.
-//
 
 import UIKit
 
 class ButtonCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    let button =  UIButton(frame: CGRect(x: 16, y: 0, width: 300 , height: 40))
+    
+    override func awakeFromNib() {super.awakeFromNib()}
+
+    
+    func configureCell(){
+        self.selectionStyle = .none
+        button.setTitle("Tomar Foto selfie", for: .normal)
+        button.backgroundColor = UIColor.black
+        button.addTarget(self, action: #selector(test), for: .touchUpInside)
+        self.addSubview(button)
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    @objc func test(sender: UIButton!) {
+        print("Tomando Foto")
     }
-
 }
