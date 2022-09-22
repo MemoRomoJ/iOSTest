@@ -4,6 +4,7 @@
 
 import UIKit
 import Firebase
+import AVFoundation
 
 class MainViewController: UIViewController {
 
@@ -39,6 +40,31 @@ class MainViewController: UIViewController {
         testTableView.estimatedRowHeight = 44.0
         testTableView.rowHeight = UITableView.automaticDimension
     }
+    
+    func cameraAccess(){
+        //tomar foto y guardar en global as UIImage.data..
+        switch AVCaptureDevice.authorizationStatus(for: .video) {
+        case .authorized: // The user has previously granted access to the camera.
+            self.setupCaptureSession()
+            
+        case .notDetermined: // The user has not yet been asked for camera access.
+            AVCaptureDevice.requestAccess(for: .video) { granted in
+                if granted {
+                    self.setupCaptureSession()
+                }
+            }
+            
+        case .denied: // The user has previously denied access.
+            return
+            
+        case .restricted: // The user can't grant access due to restrictions.
+            return
+        }
+    }
+    
+    func setupCaptureSession(){
+        
+    }
 
     func setBGColorListener(){
         /// Listener to read color and update in realtime
@@ -58,7 +84,7 @@ class MainViewController: UIViewController {
     }
 
     @objc func sendToFireStore(sender: UIButton!) {
-      print("sendToFireStore")
+        print("sendToFireStore")
     }
 }
 
@@ -107,6 +133,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
                 self.present(newViewController, animated: true , completion: nil)
             }))
             alert.addAction(UIAlertAction(title: NSLocalizedString("Retomar", comment: "Default action"), style: .default, handler: { _ in
+                self.cameraAccess()
             }))
             self.present(alert, animated: true, completion: nil)
         }

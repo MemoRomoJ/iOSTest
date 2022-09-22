@@ -1,0 +1,45 @@
+Test iOS:
+1) tabla creada con los elementos que requiere
+	detalles: no logre entrar al textField ni a la función del botón a nivel celda desde tabla.
+	aparece alerta de cámara para foto selfie
+
+
+2) al consumir el contenido pero solo me salían los headers, adjunto imagen.
+
+3) al no lograr leer el contenido correctamente del api,tampoco importe charts o alguna otra forma de graficar para esta parte.
+
+4) Ya quedo esa parte a la vista principal, no se como demostrar el cambio en tiempo real, algún video?
+
+5) No alcance a importar librerias para serializar y enviar los posibles datos a esta forma de basedatos
+
+
+6) el ViewController tiene métodos para pasar entre 2 estados appear y disappear, 
+	-al crear se usa 1vez el metodo de viewDidLoad donde se pueden hacer llamadas de red
+	-después se pasa por el metodo willAppear donde ahora sí se configuran a detalles los elementos visuales, para habilitar o deshabilitar elementos, etc
+	-se puede pasar a viewDidAppear donde se pueden iniciar las animaciones locales
+	-ahora se puede abrir una sub-Vista o regresar a la anterior, por lo que desaparecerá llamando a metodo willDisappear, ahi podremos alertar que no cierre vista sin guardar últimos datos o guardar los cambios de datos antes que desaparezca.
+	-ahora llega al didDisappear donde se pueden desactivar las notificaciones o listeners locales de la vista.
+
+	-existen otros métodos para deinit la vista y otro que se ejecuta cuando la memoria se llena, ahi se podría guardar de emergencia los datos que no se habían guardado..
+
+
+
+7) desde que se selecciona el icono de la app: 
+	-inicia en un modo de preparación donde muestra el launch Screen y se inician los métodos de appDelegate donde cargan las ViewController a window
+	-se llega al método willFinishLaunchingWithOptions para cargar el estado visual de la app.
+	-se llega al método didFinish donde se configura, por ejemplo, la base de Firebase o también cargar alguna vista especifica después de leer los userDefault que cambiaron en la ultima sesión de la app
+	-ahora se puede decir que la app esta en estado activo/corriendo donde pueden llegar de mejor manera las notificaciones y se puede navegar dentro de la app.
+	-se puede minimizar la app donde pasa al background, escuchando notificaciones y guardando el estado de app en cuanto a vista y datos.
+	-en caso de no tener eventos de background por un tiempo, se pasa a un estado mas suspendido donde la app 'duerme'
+	-si no se regresa en un tiempo a la app o se llena memoria RAM, la app entra a estado Terminado. Tambien se puede llegar a este estado cerrando la app en multitasking...
+
+
+
+8) el weak no incrementa el contador en memoria, se usa para variables que tienen corto tiempo de uso;
+El strong es para incrementar el contador en memoria, se asigna por default en cada objeto.
+Y el unowned es similar a weak al no incrementar contador, con la diferencia de que no puede ser nulo; 
+entonces weak mas util para variables que en futuro tomaran nulo y unowned para las que siempre tendrán un valor.
+
+9) es el contador de referencias automática, se encarga de administrar la memoria dependiendo de como se le asignen las variables, reteniendo o quitando de memoria dependiendo su acceso y referencia. Se recomienda usar referencias de weak/strong/unowned para evitar inestabilidad y mantener velocidad dentro de app.
+
+P.Extra: el color seria Rojo, ya que aunque en el ciclo de la app primero crea el view controller, el viewDidLoad carga despues y sobreescribiria el posible amarillo en didFinish del appdelegate
