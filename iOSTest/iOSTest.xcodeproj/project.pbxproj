@@ -21,9 +21,13 @@
 		CC4CEE5428DBB370007EA349 /* Just.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4CEE5028DBB370007EA349 /* Just.swift */; };
 		CC4CEE5528DBB370007EA349 /* HTTPResult+contentAsJSONMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4CEE5128DBB370007EA349 /* HTTPResult+contentAsJSONMap.swift */; };
 		CC4CEE5628DBB370007EA349 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4CEE5228DBB370007EA349 /* Firebase.swift */; };
+		CC4CEE5A28DBCA71007EA349 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4CEE5928DBCA71007EA349 /* GraphViewController.swift */; };
+		CC4CEE5D28DBCF3A007EA349 /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4CEE5C28DBCF3A007EA349 /* TextFieldCell.swift */; };
+		CC4CEE5F28DBD653007EA349 /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4CEE5E28DBD653007EA349 /* ButtonCell.swift */; };
+		CC4CEE6128DBDD8C007EA349 /* SelfieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4CEE6028DBDD8C007EA349 /* SelfieDetailViewController.swift */; };
 		CCE24F8128DB843800434972 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE24F8028DB843800434972 /* AppDelegate.swift */; };
 		CCE24F8328DB843800434972 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE24F8228DB843800434972 /* SceneDelegate.swift */; };
-		CCE24F8528DB843800434972 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE24F8428DB843800434972 /* ViewController.swift */; };
+		CCE24F8528DB843800434972 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE24F8428DB843800434972 /* MainViewController.swift */; };
 		CCE24F8828DB843800434972 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCE24F8628DB843800434972 /* Main.storyboard */; };
 		CCE24F8A28DB843900434972 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCE24F8928DB843900434972 /* Assets.xcassets */; };
 		CCE24F8D28DB843900434972 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCE24F8B28DB843900434972 /* LaunchScreen.storyboard */; };
@@ -43,10 +47,14 @@
 		CC4CEE5028DBB370007EA349 /* Just.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Just.swift; sourceTree = "<group>"; };
 		CC4CEE5128DBB370007EA349 /* HTTPResult+contentAsJSONMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HTTPResult+contentAsJSONMap.swift"; sourceTree = "<group>"; };
 		CC4CEE5228DBB370007EA349 /* Firebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
+		CC4CEE5928DBCA71007EA349 /* GraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
+		CC4CEE5C28DBCF3A007EA349 /* TextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCell.swift; sourceTree = "<group>"; };
+		CC4CEE5E28DBD653007EA349 /* ButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
+		CC4CEE6028DBDD8C007EA349 /* SelfieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfieDetailViewController.swift; sourceTree = "<group>"; };
 		CCE24F7D28DB843800434972 /* iOSTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCE24F8028DB843800434972 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCE24F8228DB843800434972 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CCE24F8428DB843800434972 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CCE24F8428DB843800434972 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CCE24F8728DB843800434972 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CCE24F8928DB843900434972 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCE24F8C28DB843900434972 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -86,7 +94,10 @@
 		CC4CEE3228DBAC1D007EA349 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CCE24F8428DB843800434972 /* ViewController.swift */,
+				CC4CEE5B28DBCF1C007EA349 /* Cells */,
+				CCE24F8428DB843800434972 /* MainViewController.swift */,
+				CC4CEE5928DBCA71007EA349 /* GraphViewController.swift */,
+				CC4CEE6028DBDD8C007EA349 /* SelfieDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -134,6 +145,15 @@
 				CC4CEE5028DBB370007EA349 /* Just.swift */,
 			);
 			path = FirebaseSwift;
+			sourceTree = "<group>";
+		};
+		CC4CEE5B28DBCF1C007EA349 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CC4CEE5C28DBCF3A007EA349 /* TextFieldCell.swift */,
+				CC4CEE5E28DBD653007EA349 /* ButtonCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		CCE24F7428DB843800434972 = {
@@ -245,16 +265,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC4CEE5628DBB370007EA349 /* Firebase.swift in Sources */,
-				CCE24F8528DB843800434972 /* ViewController.swift in Sources */,
+				CCE24F8528DB843800434972 /* MainViewController.swift in Sources */,
 				CC4CEE5528DBB370007EA349 /* HTTPResult+contentAsJSONMap.swift in Sources */,
 				CCE24F8128DB843800434972 /* AppDelegate.swift in Sources */,
 				CC4CEE4A28DBB1A0007EA349 /* Encoder.swift in Sources */,
 				CC4CEE5428DBB370007EA349 /* Just.swift in Sources */,
+				CC4CEE5A28DBCA71007EA349 /* GraphViewController.swift in Sources */,
+				CC4CEE5D28DBCF3A007EA349 /* TextFieldCell.swift in Sources */,
 				CC4CEE5328DBB370007EA349 /* HTTPMethod+justRequest.swift in Sources */,
 				CC4CEE4D28DBB1A0007EA349 /* FirebaseEncoder.swift in Sources */,
+				CC4CEE6128DBDD8C007EA349 /* SelfieDetailViewController.swift in Sources */,
 				CCE24F8328DB843800434972 /* SceneDelegate.swift in Sources */,
 				CC4CEE3628DBACF5007EA349 /* BackGColor.swift in Sources */,
 				CC4CEE4928DBB1A0007EA349 /* FirestoreEncoder.swift in Sources */,
+				CC4CEE5F28DBD653007EA349 /* ButtonCell.swift in Sources */,
 				CC4CEE4C28DBB1A0007EA349 /* FirestoreDecoder.swift in Sources */,
 				CC4CEE4B28DBB1A0007EA349 /* Decoder.swift in Sources */,
 				CC4CEE4828DBB1A0007EA349 /* FirebaseDecoder.swift in Sources */,

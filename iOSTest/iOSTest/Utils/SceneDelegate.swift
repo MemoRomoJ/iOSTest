@@ -49,4 +49,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
 }
-
+extension UIViewController {
+    var appDelegate : AppDelegate{
+        get {return UIApplication.shared.delegate as! AppDelegate}
+    }
+}
