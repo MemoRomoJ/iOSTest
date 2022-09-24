@@ -44,7 +44,7 @@ class GraphViewController: UIViewController {
                 return
             }
             
-            print(data.description)
+            print(data.hashValue)
             print(response!.description)
             do {
                 let decodedObject = try JSONDecoder().decode(objectType.self, from: data)
@@ -61,7 +61,7 @@ class GraphViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.systemBackground
         // aqui consultar el API y mostrar grafica
-        dataRequest(with: "https://us-central1-bibliotecadecontenido.cloudfunctions.net/helloWorld", objectType: ApiObj.self) { (result: Result) in
+        dataRequest(with: "https://s3.amazonaws.com/dev.structure.files/examen/ios/test.json", objectType: GraphEntity.self) { (result: Result) in
             switch result {
             case .success(let object):
                 print(object)
