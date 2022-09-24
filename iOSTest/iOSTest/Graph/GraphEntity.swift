@@ -4,7 +4,7 @@
 
 import Foundation
 
-struct GraphValues: Decodable {
+struct GraphEntity: Decodable {
     let reporte: [Reporte]
     let empresas: [Empresa]
 }
