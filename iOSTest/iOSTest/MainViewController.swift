@@ -21,7 +21,7 @@ class MainViewController: UIViewController {
     }
     
     func setTableView(){
-        self.testTableView.backgroundColor = UIColor.clear
+        testTableView.backgroundColor = UIColor.clear
         view.addSubview(testTableView)
         testTableView.translatesAutoresizingMaskIntoConstraints = false
         testTableView.topAnchor.constraint(equalTo:view.topAnchor).isActive = true
@@ -138,8 +138,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             self.present(alert, animated: true, completion: nil)
         }
         if indexPath.row == 2{
-            let newViewController = GraphViewController()
-            //self.navigationController?.pushViewController(newViewController, animated: true)
+            let newViewController = GraphWireFrame.createGraphModule()
             self.present(newViewController, animated: true , completion: nil)
         }
     }

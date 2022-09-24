@@ -21,19 +21,20 @@
 		CC4CEE5428DBB370007EA349 /* Just.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4CEE5028DBB370007EA349 /* Just.swift */; };
 		CC4CEE5528DBB370007EA349 /* HTTPResult+contentAsJSONMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4CEE5128DBB370007EA349 /* HTTPResult+contentAsJSONMap.swift */; };
 		CC4CEE5628DBB370007EA349 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4CEE5228DBB370007EA349 /* Firebase.swift */; };
-		CC4CEE5A28DBCA71007EA349 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4CEE5928DBCA71007EA349 /* GraphViewController.swift */; };
 		CC4CEE5D28DBCF3A007EA349 /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4CEE5C28DBCF3A007EA349 /* TextFieldCell.swift */; };
 		CC4CEE5F28DBD653007EA349 /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4CEE5E28DBD653007EA349 /* ButtonCell.swift */; };
 		CC4CEE6128DBDD8C007EA349 /* SelfieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4CEE6028DBDD8C007EA349 /* SelfieDetailViewController.swift */; };
 		CC4CEE6328DBFD7A007EA349 /* GraphEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4CEE6228DBFD7A007EA349 /* GraphEntity.swift */; };
 		CC4CEE6528DBFDD8007EA349 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4CEE6428DBFDD8007EA349 /* User.swift */; };
 		CC4CEE6F28DE8141007EA349 /* GraphPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4CEE6828DE8141007EA349 /* GraphPresenter.swift */; };
-		CC4CEE7028DE8141007EA349 /* GraphLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4CEE6928DE8141007EA349 /* GraphLocalDataManager.swift */; };
 		CC4CEE7128DE8141007EA349 /* GraphProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4CEE6A28DE8141007EA349 /* GraphProtocols.swift */; };
 		CC4CEE7228DE8141007EA349 /* GraphInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4CEE6B28DE8141007EA349 /* GraphInteractor.swift */; };
 		CC4CEE7328DE8141007EA349 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4CEE6C28DE8141007EA349 /* GraphView.swift */; };
 		CC4CEE7428DE8141007EA349 /* GraphRemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4CEE6D28DE8141007EA349 /* GraphRemoteDataManager.swift */; };
 		CC4CEE7528DE8141007EA349 /* GraphWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4CEE6E28DE8141007EA349 /* GraphWireFrame.swift */; };
+		CC5A24A328DEBD1400C53BF5 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = CC5A24A228DEBD1400C53BF5 /* Charts */; };
+		CC5A24A728DEBFE900C53BF5 /* GraphCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5A24A628DEBFE900C53BF5 /* GraphCell.swift */; };
+		CC5A24AC28DEE82500C53BF5 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5A24AB28DEE82500C53BF5 /* APIManager.swift */; };
 		CCE24F8128DB843800434972 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE24F8028DB843800434972 /* AppDelegate.swift */; };
 		CCE24F8328DB843800434972 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE24F8228DB843800434972 /* SceneDelegate.swift */; };
 		CCE24F8528DB843800434972 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE24F8428DB843800434972 /* MainViewController.swift */; };
@@ -55,19 +56,19 @@
 		CC4CEE5028DBB370007EA349 /* Just.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Just.swift; sourceTree = "<group>"; };
 		CC4CEE5128DBB370007EA349 /* HTTPResult+contentAsJSONMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HTTPResult+contentAsJSONMap.swift"; sourceTree = "<group>"; };
 		CC4CEE5228DBB370007EA349 /* Firebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
-		CC4CEE5928DBCA71007EA349 /* GraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		CC4CEE5C28DBCF3A007EA349 /* TextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCell.swift; sourceTree = "<group>"; };
 		CC4CEE5E28DBD653007EA349 /* ButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
 		CC4CEE6028DBDD8C007EA349 /* SelfieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfieDetailViewController.swift; sourceTree = "<group>"; };
 		CC4CEE6228DBFD7A007EA349 /* GraphEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphEntity.swift; sourceTree = "<group>"; };
 		CC4CEE6428DBFDD8007EA349 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CC4CEE6828DE8141007EA349 /* GraphPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphPresenter.swift; sourceTree = "<group>"; };
-		CC4CEE6928DE8141007EA349 /* GraphLocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphLocalDataManager.swift; sourceTree = "<group>"; };
 		CC4CEE6A28DE8141007EA349 /* GraphProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphProtocols.swift; sourceTree = "<group>"; };
 		CC4CEE6B28DE8141007EA349 /* GraphInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphInteractor.swift; sourceTree = "<group>"; };
 		CC4CEE6C28DE8141007EA349 /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 		CC4CEE6D28DE8141007EA349 /* GraphRemoteDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphRemoteDataManager.swift; sourceTree = "<group>"; };
 		CC4CEE6E28DE8141007EA349 /* GraphWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphWireFrame.swift; sourceTree = "<group>"; };
+		CC5A24A628DEBFE900C53BF5 /* GraphCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphCell.swift; sourceTree = "<group>"; };
+		CC5A24AB28DEE82500C53BF5 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		CCE24F7D28DB843800434972 /* iOSTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCE24F8028DB843800434972 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCE24F8228DB843800434972 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +84,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC4CEE2B28DB95B7007EA349 /* FirebaseDatabase in Frameworks */,
+				CC5A24A328DEBD1400C53BF5 /* Charts in Frameworks */,
 				CC4CEE2D28DB95B7007EA349 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,6 +97,7 @@
 			children = (
 				CCE24F8028DB843800434972 /* AppDelegate.swift */,
 				CCE24F8228DB843800434972 /* SceneDelegate.swift */,
+				CC5A24AB28DEE82500C53BF5 /* APIManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -159,15 +162,14 @@
 		CC4CEE6728DE810D007EA349 /* Graph */ = {
 			isa = PBXGroup;
 			children = (
+				CC5A24A628DEBFE900C53BF5 /* GraphCell.swift */,
 				CC4CEE6C28DE8141007EA349 /* GraphView.swift */,
 				CC4CEE6B28DE8141007EA349 /* GraphInteractor.swift */,
 				CC4CEE6828DE8141007EA349 /* GraphPresenter.swift */,
 				CC4CEE6228DBFD7A007EA349 /* GraphEntity.swift */,
 				CC4CEE6E28DE8141007EA349 /* GraphWireFrame.swift */,
 				CC4CEE6D28DE8141007EA349 /* GraphRemoteDataManager.swift */,
-				CC4CEE6928DE8141007EA349 /* GraphLocalDataManager.swift */,
 				CC4CEE6A28DE8141007EA349 /* GraphProtocols.swift */,
-				CC4CEE5928DBCA71007EA349 /* GraphViewController.swift */,
 			);
 			path = Graph;
 			sourceTree = "<group>";
@@ -220,6 +222,7 @@
 			packageProductDependencies = (
 				CC4CEE2A28DB95B7007EA349 /* FirebaseDatabase */,
 				CC4CEE2C28DB95B7007EA349 /* FirebaseFirestore */,
+				CC5A24A228DEBD1400C53BF5 /* Charts */,
 			);
 			productName = iOSTest;
 			productReference = CCE24F7D28DB843800434972 /* iOSTest.app */;
@@ -251,6 +254,7 @@
 			mainGroup = CCE24F7428DB843800434972;
 			packageReferences = (
 				CC4CEE2928DB95B7007EA349 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				CC5A24A128DEBD1400C53BF5 /* XCRemoteSwiftPackageReference "Charts" */,
 			);
 			productRefGroup = CCE24F7E28DB843800434972 /* Products */;
 			projectDirPath = "";
@@ -282,14 +286,14 @@
 				CC4CEE7328DE8141007EA349 /* GraphView.swift in Sources */,
 				CC4CEE5628DBB370007EA349 /* Firebase.swift in Sources */,
 				CC4CEE6328DBFD7A007EA349 /* GraphEntity.swift in Sources */,
-				CC4CEE7028DE8141007EA349 /* GraphLocalDataManager.swift in Sources */,
 				CCE24F8528DB843800434972 /* MainViewController.swift in Sources */,
+				CC5A24AC28DEE82500C53BF5 /* APIManager.swift in Sources */,
 				CC4CEE5528DBB370007EA349 /* HTTPResult+contentAsJSONMap.swift in Sources */,
 				CC4CEE7228DE8141007EA349 /* GraphInteractor.swift in Sources */,
 				CCE24F8128DB843800434972 /* AppDelegate.swift in Sources */,
 				CC4CEE4A28DBB1A0007EA349 /* Encoder.swift in Sources */,
 				CC4CEE5428DBB370007EA349 /* Just.swift in Sources */,
-				CC4CEE5A28DBCA71007EA349 /* GraphViewController.swift in Sources */,
+				CC5A24A728DEBFE900C53BF5 /* GraphCell.swift in Sources */,
 				CC4CEE6528DBFDD8007EA349 /* User.swift in Sources */,
 				CC4CEE7428DE8141007EA349 /* GraphRemoteDataManager.swift in Sources */,
 				CC4CEE5D28DBCF3A007EA349 /* TextFieldCell.swift in Sources */,
@@ -525,6 +529,14 @@
 				kind = branch;
 			};
 		};
+		CC5A24A128DEBD1400C53BF5 /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -537,6 +549,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CC4CEE2928DB95B7007EA349 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
+		};
+		CC5A24A228DEBD1400C53BF5 /* Charts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CC5A24A128DEBD1400C53BF5 /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = Charts;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

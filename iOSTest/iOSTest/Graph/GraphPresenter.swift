@@ -1,10 +1,6 @@
-//
 //  GraphPresenter.swift
 //  iOSTest
-//
 //  Created by Guillermo Romo Jiménez on 23/09/22.
-//  
-//
 
 import Foundation
 
@@ -20,9 +16,12 @@ class GraphPresenter  {
 extension GraphPresenter: GraphPresenterProtocol {
     // TODO: implement presenter methods
     func viewDidLoad() {
+        interactor?.remoteDatamanager?.getExternalData()
     }
 }
 
 extension GraphPresenter: GraphInteractorOutputProtocol {
-    // TODO: implement interactor output methods
+    func pushDataToPresenter(receivedData: GraphEntity) {
+        view?.pushDataToView(receivedData: receivedData)
+    }
 }

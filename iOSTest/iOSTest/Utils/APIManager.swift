@@ -1,23 +1,25 @@
-//  GraphViewController.swift
+//  APIManager.swift
 //  iOSTest
-//  Created by Guillermo Romo Jiménez on 21/09/22.
+//  Created by Guillermo Romo Jiménez on 24/09/22.
 
-import UIKit
+import Foundation
 
-class GraphViewController: UIViewController {
-    //AppError enum which shows all possible errors
-    enum AppError: Error {
-        case networkError(Error)
-        case dataNotFound
-        case jsonParsingError(Error)
-        case invalidStatusCode(Int)
-    }
+//AppError enum which shows all possible errors
+enum AppError: Error {
+    case networkError(Error)
+    case dataNotFound
+    case jsonParsingError(Error)
+    case invalidStatusCode(Int)
+}
 
-    //Result enum to show success or failure
-    enum Result<T> {
-        case success(T)
-        case failure(AppError)
-    }
+//Result enum to show success or failure
+enum Result<T> {
+    case success(T)
+    case failure(AppError)
+}
+
+class APIManager{
+    static let manager = APIManager()
 
     //dataRequest which sends request to given URL and convert to Decodable Object
     func dataRequest<T: Decodable>(with url: String, objectType: T.Type, completion: @escaping (Result<T>) -> Void) {
@@ -55,20 +57,6 @@ class GraphViewController: UIViewController {
         })
         
         task.resume()
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.view.backgroundColor = UIColor.systemBackground
-        // aqui consultar el API y mostrar grafica
-        dataRequest(with: "https://s3.amazonaws.com/dev.structure.files/examen/ios/test.json", objectType: GraphEntity.self) { (result: Result) in
-            switch result {
-            case .success(let object):
-                print(object)
-            case .failure(let error):
-                print(error)
-            }
-        }
     }
 
 }

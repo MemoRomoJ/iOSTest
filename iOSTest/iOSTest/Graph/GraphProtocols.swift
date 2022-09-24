@@ -9,17 +9,18 @@
 import Foundation
 import UIKit
 
-protocol GraphViewProtocol: class {
+protocol GraphViewProtocol: AnyObject {
     // PRESENTER -> VIEW
     var presenter: GraphPresenterProtocol? { get set }
+    func pushDataToView(receivedData: GraphEntity)
 }
 
-protocol GraphWireFrameProtocol: class {
+protocol GraphWireFrameProtocol: AnyObject {
     // PRESENTER -> WIREFRAME
     static func createGraphModule() -> UIViewController
 }
 
-protocol GraphPresenterProtocol: class {
+protocol GraphPresenterProtocol: AnyObject {
     // VIEW -> PRESENTER
     var view: GraphViewProtocol? { get set }
     var interactor: GraphInteractorInputProtocol? { get set }
@@ -28,30 +29,35 @@ protocol GraphPresenterProtocol: class {
     func viewDidLoad()
 }
 
-protocol GraphInteractorOutputProtocol: class {
+protocol GraphInteractorOutputProtocol: AnyObject {
 // INTERACTOR -> PRESENTER
+    func pushDataToPresenter(receivedData: GraphEntity)
 }
 
-protocol GraphInteractorInputProtocol: class {
+protocol GraphInteractorInputProtocol: AnyObject {
     // PRESENTER -> INTERACTOR
     var presenter: GraphInteractorOutputProtocol? { get set }
     var localDatamanager: GraphLocalDataManagerInputProtocol? { get set }
     var remoteDatamanager: GraphRemoteDataManagerInputProtocol? { get set }
+    
+    func getData()
 }
 
-protocol GraphDataManagerInputProtocol: class {
+protocol GraphDataManagerInputProtocol: AnyObject {
     // INTERACTOR -> DATAMANAGER
 }
 
-protocol GraphRemoteDataManagerInputProtocol: class {
+protocol GraphRemoteDataManagerInputProtocol: AnyObject {
     // INTERACTOR -> REMOTEDATAMANAGER
     var remoteRequestHandler: GraphRemoteDataManagerOutputProtocol? { get set }
+    func getExternalData()
 }
 
-protocol GraphRemoteDataManagerOutputProtocol: class {
+protocol GraphRemoteDataManagerOutputProtocol: AnyObject {
     // REMOTEDATAMANAGER -> INTERACTOR
+    func sendBackData(with entity: GraphEntity)
 }
 
-protocol GraphLocalDataManagerInputProtocol: class {
+protocol GraphLocalDataManagerInputProtocol: AnyObject {
     // INTERACTOR -> LOCALDATAMANAGER
 }

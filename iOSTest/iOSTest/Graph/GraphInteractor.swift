@@ -1,10 +1,6 @@
-//
 //  GraphInteractor.swift
 //  iOSTest
-//
 //  Created by Guillermo Romo Jiménez on 23/09/22.
-//  
-//
 
 import Foundation
 
@@ -14,9 +10,16 @@ class GraphInteractor: GraphInteractorInputProtocol {
     weak var presenter: GraphInteractorOutputProtocol?
     var localDatamanager: GraphLocalDataManagerInputProtocol?
     var remoteDatamanager: GraphRemoteDataManagerInputProtocol?
+    
+    var graphData : GraphEntity?
 
+    func getData() {
+        remoteDatamanager?.getExternalData()
+    }
 }
 
 extension GraphInteractor: GraphRemoteDataManagerOutputProtocol {
-    // TODO: Implement use case methods
+    func sendBackData(with entity: GraphEntity) {
+        presenter?.pushDataToPresenter(receivedData: entity)
+    }
 }
