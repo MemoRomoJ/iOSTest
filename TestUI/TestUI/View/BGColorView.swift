@@ -68,7 +68,7 @@ struct BGColorView: View {
                 
                 let model = try! FirebaseEncoder().encode(bgColor)
                 
-                firebase.setValue(path: "backgroundViewsColor", value: model,
+                firebase.setValue(path: DbRoutes.backgroundViewsColor.rawValue, value: model,
                                   asyncCompletion: { (error) in
                     debugPrint("Completed")
                     if error != nil {
@@ -86,7 +86,7 @@ struct BGColorView: View {
         .padding()
         .onAppear(){
             /// Listener to read color and update in realtime
-            ref = Database.database().reference(withPath: "backgroundViewsColor")
+            ref = Database.database().reference(withPath: DbRoutes.backgroundViewsColor.rawValue)
             ref.observeSingleEvent(of: DataEventType.value, with: { (snapshot) in
                 do {
                     let model = try FirebaseDecoder().decode(BackGColor.self, from: snapshot.value)

@@ -36,7 +36,7 @@ struct MainView: View {
                             Text("Tomar foto selfie")
                         }
                         .sheet(isPresented: $showCamera) {
-                            ImagePicker(sourceType: .camera, selectedImage: self.$viewModel.user.photo)
+                            ImagePicker(sourceType: .camera, selectedImage: self.$viewModel.photo)
                         }
                         .buttonStyle(GrowingButton())
                         
@@ -48,7 +48,8 @@ struct MainView: View {
                             Image(systemName: "option")
                         }
                         .sheet(isPresented: $showCameraView) {
-                            Image(uiImage: viewModel.user.photo)
+                            //Image(uiImage: viewModel.user.photo!)
+                            Image(uiImage: viewModel.photo)
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                         }
@@ -61,16 +62,10 @@ struct MainView: View {
                                     GraphView()
                     )
                     
-                    /// 6 Lista de usuarios Firestore
-                    NavigationLink("Lista de Firestore si logre ",
-                                   destination:
-                                    Text("DetailV")
-                    )
-                    
                     /// 6 Lista de usuarios realTime
-                    NavigationLink("Lista de realtime como backup",
+                    NavigationLink("Lista de users en realtimeDB",
                                    destination:
-                                    Text("DetailV")
+                                    UsersListView(userList: self.$viewModel.userList)
                     )
                     
                     /// 7/8 Editar colores tiempo real de otra app
@@ -83,7 +78,7 @@ struct MainView: View {
                 Spacer()
                 
                 Button(action: {
-                    
+                    viewModel.sendToStorage()
                 }) {
                     Text("Enviar Nombre & Foto a Firebase")
                 }

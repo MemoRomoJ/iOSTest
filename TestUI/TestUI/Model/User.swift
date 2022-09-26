@@ -5,15 +5,16 @@
 import Foundation
 import UIKit
 
-struct User:Identifiable{//}, Codable {
+struct User:Identifiable, Codable {
     
     var id: Int
     var name: String
-    var photo: UIImage
+    var photoURL: String
     
     init(){
         id = -1
         name = ""
-        photo = UIImage(systemName: "option")!
+        photoURL = ""
     }
+    
 }

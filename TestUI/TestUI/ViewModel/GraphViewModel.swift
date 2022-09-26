@@ -8,18 +8,19 @@ final class GraphViewModel: ObservableObject {
     
     var dataModel : GraphModel?
     
-    func getGraphData() -> Bool{
-        var found = false
+    init(){
+        getGraphData()
+    }
+    
+    func getGraphData() {
         APIManager.manager.dataRequest(with: APIRoute, objectType: GraphModel.self) { (result: Result) in
             switch result {
             case .success(let object):
                 print(object)
                 self.dataModel = object
-                found = true
             case .failure(let error):
                 print(error)
             }
         }
-        return found
     }
 }

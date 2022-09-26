@@ -6,7 +6,7 @@ import SwiftUI
 
 struct GraphView: View{
     
-    @State var dataModel : GraphModel?
+    @State var viewModel = GraphViewModel()
     
     @State var yesNoPercentage = [Double]()
     @State var businessPercentage = [Double]()
@@ -18,8 +18,9 @@ struct GraphView: View{
                         Color.orange,Color.cyan,Color.yellow]
     
     var body: some View{
-        VStack{
+        List{
             Text(graphStr1)
+                .fixedSize(horizontal: false, vertical: true)
                 .padding()
             
             ZStack {
@@ -54,15 +55,25 @@ struct GraphView: View{
                     }
                     
                 }
-                
-                // text Labels with %
             }
             .frame(width: 150, height: 150)
             .padding()
             
+            
+            ForEach(Array(yesNoTexts.enumerated()), id: \.offset) { index, val in
+                HStack{
+                    Circle()
+                        .frame(width: 14, height: 14)
+                        .foregroundColor(colors[index])
+                    
+                    Text("\(val) \(yesNoPercentage[index], specifier: "%.0f")")
+                }
+            }
+            
             Spacer()
             
             Text(graphStr2)
+                .fixedSize(horizontal: false, vertical: true)
                 .padding()
             
             ZStack {
@@ -97,28 +108,29 @@ struct GraphView: View{
                     }
                     
                 }
-                // text Labels with %
             }
             .frame(width: 150, height: 150)
             .padding()
-        }
-        .onAppear(){
-            /// VM.getData...
-            APIManager.manager.dataRequest(with: APIRoute, objectType: GraphModel.self) { (result: Result) in
-                switch result {
-                case .success(let object):
-                    print(object)
-                    self.dataModel = object
-                    setDataValues()
-                case .failure(let error):
-                    print(error)
+            
+            ForEach(Array(businessTexts.enumerated()), id: \.offset) { index, val in
+                HStack{
+                    Circle()
+                        .frame(width: 14, height: 14)
+                        .foregroundColor(colors[index])
+                    
+                    Text("\(val) \(businessPercentage[index], specifier: "%.0f")")
                 }
             }
+            
+        }
+        .onAppear(){
+            viewModel.getGraphData()
+            setDataValues()
         }
     }
     
     func setDataValues(){
-        for (i, d) in dataModel!.reporte.enumerated(){
+        for (i, d) in viewModel.dataModel!.reporte.enumerated(){
             if i == 0{
                 yesNoPercentage.append(Double(d.cantidad)!)
             }else{
@@ -126,7 +138,7 @@ struct GraphView: View{
             }
         }
         
-        for (i, d) in dataModel!.empresas.enumerated(){
+        for (i, d) in viewModel.dataModel!.empresas.enumerated(){
             if i == 0{
                 businessPercentage.append(Double(d.porcentaje))
             }else{
@@ -134,11 +146,11 @@ struct GraphView: View{
             }
         }
         
-        for d in dataModel!.empresas{
+        for d in viewModel.dataModel!.empresas{
             businessTexts.append(d.nombre)
         }
         
-        for d in dataModel!.reporte{
+        for d in viewModel.dataModel!.reporte{
             yesNoTexts.append(d.valor)
         }
     }
